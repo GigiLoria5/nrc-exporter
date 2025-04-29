@@ -496,7 +496,7 @@ def save_gpx(gpx_data, activity_id):
     """
 
     file_path = os.path.join(GPX_FOLDER, activity_id + ".gpx")
-    with open(file_path, "w") as f:
+    with open(file_path, "w", encoding="utf-8") as f:
         f.write(gpx_data)
 
 

@@ -231,6 +231,7 @@ def get_access_token(options):
     """
 
     login_success = False
+    driver = None
 
     if options["gecko_path"] and not options["manual"]:
         info(f"🚗 Starting gecko webdriver")
@@ -268,10 +269,11 @@ def get_access_token(options):
             )
             sys.exit(1)
 
-    info(
-        f"Closing the webdriver. From here on we will be using requests library instead"
-    )
-    driver.quit()
+    if driver is not None:
+        info(
+            f"Closing the webdriver. From here on we will be using requests library instead"
+        )
+        driver.quit()
     return access_token
 
 

@@ -32,13 +32,7 @@ __license__ = "MIT"
 ACTIVITY_FOLDER = os.path.join(os.getcwd(), "activities")
 GPX_FOLDER = os.path.join(os.getcwd(), "gpx_output")
 LOGIN_URL = "https://www.nike.com/in/launch?s=in-stock"
-MOBILE_LOGIN_URL = (
-    "https://unite.nike.com/s3/unite/mobile.html?androidSDKVersion=3.1.0"
-    "&corsoverride=https://unite.nike.com&uxid=com.nike.sport.running.droid.3.8"
-    "&locale=en_US&backendEnvironment=identity&view=login"
-    "&clientId=WLr1eIG5JSNNcBJM3npVa6L76MK8OBTt&facebookAppId=84697719333"
-    "&wechatAppId=wxde7d0246cfaf32f7"
-)
+MOBILE_LOGIN_URL = "https://www.nike.com/"
 ACTIVITY_LIST_URL = "https://api.nike.com/plus/v3/activities/before_id/v3/*?limit=30&types=run%2Cjogging&include_deleted=false"
 ACTIVITY_LIST_PAGINATION = (
     "https://api.nike.com/plus/v3/activities/before_id/v3/{before_id}?limit=30&types=run%2Cjogging&include_deleted=false"
